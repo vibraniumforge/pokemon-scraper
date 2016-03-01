@@ -8,7 +8,7 @@ describe "Pokemon" do
     @sql_runner.execute_schema_migration_sql
   end
 
-  let(:pokemon) {Pokemon.new([1, "Pikachu", "fire"], @db)}
+  let(:pokemon) {Pokemon.new(1, "Pikachu", "fire", @db)}
 
   describe ".initialize" do
     it 'is initialized with a name, type and db' do

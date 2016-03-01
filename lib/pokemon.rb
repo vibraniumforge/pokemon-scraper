@@ -9,8 +9,10 @@ class Pokemon
     db.execute("SELECT * FROM pokemon WHERE id=?", id_num).first
   end
 
-  def initialize(attr_array, db)
-    @id, @name, @type, @hp = *attr_array
+  def initialize(id, name, type, db)
+    @id = id
+    @name = name
+    @type = type
     @db = db
   end
 
